@@ -1,0 +1,540 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ol, ul{ list-style: none; }
+a{ text-decoration: none; outline: 0; }
+img{border: 0; width: 100%; height: 100%;}
+body{font: 12px 'Poiret One'; color: #555;}
+button{ border: 0; box-shadow: none; background:inherit; cursor: pointer;}
+header{
+    position: fixed;
+    top: 0px; left: 0px; 
+    width: 15%; height: 100%; 
+    background-color: #fff;
+    transition: all 0.5s;
+    z-index: 999;
+}
+header h1{
+    width: 180px; height: 136px; 
+    background:url("../img/logo.jpg") no-repeat 0px 0px;
+    background-size: contain;
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    margin-left: -90px; 
+    text-indent: -9999px;
+    
+}
+
+header .menu > a{
+    display: block;
+    position: absolute;
+    width: 65px;
+    height: 10%;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu svg{
+    font-size: 70px;
+    color: #083108;
+}
+
+.menu ul{
+    position: absolute;
+    top:300px;
+    width: 160px;
+    height: 250px;
+    left: 50px;
+    opacity: 0;
+    transition: all 1.0s;
+}
+
+
+.menu ul li {
+    height: 50px;
+    line-height: 50px;
+    width: 160px;
+    text-align: center;
+    border-bottom: 1px solid green;
+}
+
+.menu ul li a{
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #848484;
+}
+
+.menu ul li a:hover{
+    background-color: green;
+    color: #fff;
+}
+
+.snsSet{
+    width: 126px; height: 42px; position: absolute;
+    bottom: 50px; right: 50%; margin-right: -63px;
+}
+
+.snsSet a{
+    float: left;
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 5px;
+}
+
+.snsSet a img{
+    width: 32px;
+    height: 32px;
+}
+nav{
+    position: relative;
+    width: 85%; height: 35px;
+    background-color: #212121;
+    margin-left: 15%;
+    transition: all 0.5s;
+}
+
+nav .icontents a{
+    color: #b1b1b1;
+    font-size: 15px;
+}
+
+nav .icontents{
+    margin-left: 20px;
+    height: 35px;
+    padding-top: 7px;
+}
+
+nav .icontents ul li{
+    float: left;
+    padding: 0 20px;
+}
+
+nav .icontents ul li a:hover{
+    color: #fff;
+}
+
+section{
+    width: 85%; position: relative;
+    margin-left: 15%;
+    overflow: hidden;
+}
+
+article{
+    float: left; height: 260px;
+    transition: all 0.5s;
+    animation: scale 1s 1;
+     position: relative;
+    overflow: hidden;
+}
+
+@keyframes scale{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+article:nth-child(1){
+    width: 60%; height: 520px; background-color: #aaa;
+    overflow: hidden;
+}
+
+article:nth-child(1) > img{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+
+article:nth-child(1) > img:first-child{
+    opacity: 1;
+}
+article:nth-child(1) .info{
+    width: 60%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    right: -260px;
+    bottom: 0;
+    opacity: 0.5;
+    transform: skew(-44deg);
+}
+
+article:nth-child(1) .info .text{
+    position: absolute;
+    bottom: 20px;
+    left:150px;
+    transform: skewX(44deg);
+}
+
+article:nth-child(1) .info h1{
+    font-size: 100px;
+    color: #fff;
+    text-align: right;
+}
+
+
+article:nth-child(1) button svg{
+    font-size: 25px;
+}
+
+article:nth-child(1) .item{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.9;
+    transition: 0.4s;
+    display: none;
+}
+
+article:nth-child(1) .item > div{
+    display: none;
+}
+
+.closeBtn{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    color: #fff;
+    font-size: 30px;
+}
+
+article:nth-child(1) .item .p_box{
+    height: 30%;
+    margin: 30px;
+}
+
+article:nth-child(1) .item p{
+    font-size: 20px;
+    color: #fff;
+    margin: 5px 10px;
+}
+
+article:nth-child(1) .item p b{
+    letter-spacing: 4px;
+}
+
+article:nth-child(1) .item .img_box{
+    height: 70%;
+}
+
+article:nth-child(1) .item img{
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    width: 80%;
+    height: 300px;
+    transform: translateX(-50%);
+}
+
+
+article:nth-child(1) a svg{ font-size: 25px;}
+
+article:nth-child(1) .best{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+article:nth-child(1) svg{
+    margin: 0 10px;
+}
+.best1 svg{ color: purple;}
+
+.best1 svg:hover { color: #2c0a2c;}
+
+.best2 svg{ color: orange;}
+
+.best2 svg:hover{ color: #764d03;}
+
+.best3 svg{color: yellow;}
+
+.best3 svg:hover{color: #8e8e00;}
+
+
+article:nth-child(2){
+    width: 40%; background-color: #bbb;
+    transform: scale(1);
+    transition: all 0.5s;
+}
+
+article:hover{
+    transform: scale(1.05);
+    z-index: 99;
+}
+
+article:nth-child(3){
+    width: 40%; background-color: #ccc;
+}
+
+article:nth-child(4){
+    width: 20%; background-color: #ddd;
+}
+
+article:nth-child(5){
+    width: 60%; background-color: #eee;
+}
+
+article:nth-child(5) > img{
+    position: absolute;
+    top: 0;
+    left: -100%;
+}
+
+article:nth-child(5):hover .info{
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+article:nth-child(5):hover h1{
+    display: block;
+}
+
+article:nth-child(5) h1{
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: -5px;
+    
+}
+
+article:nth-child(5) > img:first-child{
+    left: 0;
+}
+
+article:nth-child(6){
+    width: 20%; background-color: #222; 
+}
+
+article:nth-child(7){
+    width: 50%; background-color: #333;
+}
+
+article:nth-child(8){
+    width: 50%; background-color: #444;
+}
+
+
+
+@media screen and (min-width:1280px) and (max-width:1599px){
+    header{
+        position: relative;
+        width: 100%;
+        height: 80px;
+    }
+    nav{
+        width: 100%; margin-left: 0%;
+    }
+    section{
+        width: 100%; margin-left: 0px;
+    }
+    header h1{
+        width: 120px; height: 60px; background: url(../img/logo.jpg) no-repeat 0px 0px;
+        background-size: contain; position: absolute; 
+        top: 30px;
+        left: 20px;
+        margin-left: 0px;
+    }
+    .snsSet{
+        bottom: 20px;
+        right: 80px;
+    }
+    
+    .menu{
+        position: absolute;
+        top: -190px;
+        left: 220px;
+    }
+    
+    .menu ul{
+        position: absolute;
+        left: -80px;
+        top: 270px;
+        background-color: #0a330a;
+    }
+}
+
+@media screen and (min-width:1024px) and (max-width:1279px){
+    header{
+        position: relative;
+        width: 100%;
+        height: 80px;
+    }
+    nav{
+        width: 100%; margin-left: 0%;
+    }
+    section{
+        width: 100%; margin-left: 0px;
+    }
+    header h1{
+        width: 120px; height: 60px; background: url(../img/logo.jpg) no-repeat 0px 0px;
+        background-size: contain; position: absolute; 
+        top: 30px;
+        left: 20px;
+        margin-left: 0px;
+    }
+    .snsSet{
+        bottom: 20px;
+        right: 80px;
+    }
+      .menu{
+        position: absolute;
+        top: -190px;
+        left: 220px;
+    }
+    
+    .menu ul{
+        position: absolute;
+        left: -80px;
+        top: 270px;
+        background-color: #0a330a;
+    }
+    article:nth-child(1){ width: 75%; }
+    article:nth-child(2){ width: 25%; }
+    article:nth-child(3){ width: 25%; }
+    article:nth-child(4){ width: 25%; display: none;}
+    article:nth-child(5){ width: 60%; }
+    article:nth-child(6){ width: 40%; }
+    article:nth-child(7){ width: 50%; }
+    article:nth-child(8){ width: 50%; }
+    
+}
+
+@media screen and (min-width:780px) and (max-width:1023px){
+    header{
+        position: relative;
+        width: 100%;
+        height: 80px;
+    }
+    nav{
+        width: 100%; margin-left: 0%;
+    }
+    section{
+        width: 100%; margin-left: 0px;
+    }
+    header h1{
+        width: 150px; height: 120px;
+        background: url(../img/logo.jpg) no-repeat 0px 0px;
+        background-size: contain;
+        position: relative;
+        top: 30px; left: 20px; 
+        margin: 0 auto;
+    }
+    
+    .snsSet{
+        bottom: 20px; right: 80px;
+    }
+      .menu{
+        position: absolute;
+        top: -190px;
+        left: 220px;
+    }
+    
+    .menu ul{
+        position: absolute;
+        left: -80px;
+        top: 270px;
+        background-color: #0a330a;
+    }
+    
+    .closeBtn{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    color: #fff;
+    font-size: 30px;
+    }    
+    
+    article:nth-child(1){ width: 100%; }
+    article:nth-child(2){ width: 66.6666%; }
+    article:nth-child(3){ width: 33.3333%; }
+    article:nth-child(4){ width: 100%; display: none;}
+    article:nth-child(5){ width: 60%; }
+    article:nth-child(6){ width: 40%; display: none; }
+    article:nth-child(7){ width: 100%; display: none;}
+    article:nth-child(8){ width: 40%; }
+}
+
+@media screen and (max-width:779px) {
+     header{
+        position: relative;
+        width: 100%;
+        height: 130px;
+    }
+    nav{
+        display: none;
+    }
+    section{
+        width: 100%; margin-left: 0px;
+    }
+    
+    header h1{
+        width: 150px; height: 120px;
+        background: url(../img/logo.jpg) no-repeat 0px 0px;
+        background-size: contain;
+        position: relative;
+        top: 50px; left: 20px; 
+        margin: 0 auto;
+    }
+    
+    .snsSet{
+        bottom: 20px; right: 80px;
+    }
+      .menu{
+        position: absolute;
+        top: -170px;
+        left: 220px;
+    }
+    
+    .menu ul{
+        position: absolute;
+        left: -80px;
+        top: 270px;
+        background-color: #0a330a;
+    }
+    article{height: 150px;}
+    
+    article:nth-child(1) .info h1{
+        font-size: 50px;
+        position: absolute;
+        bottom: 50px;
+        right: 30px;
+    }
+    
+    article:nth-child(1) .item img{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    width: 80%;
+    height: 200px;
+    transform: translateX(-50%);
+}
+    
+    
+    article:nth-child(1){ width: 100%; height: 400px;}
+    article:nth-child(2){ width: 100%; }
+    article:nth-child(3){ width: 100%; display:none; }
+    article:nth-child(4){ width: 66.6666%; display:none; }
+    article:nth-child(5){ width: 100%; height: 200px; }
+    article:nth-child(6){ width: 50%; display: none;}
+    article:nth-child(7){ width: 50%; }
+    article:nth-child(8){ width: 50%; }
+}
+
